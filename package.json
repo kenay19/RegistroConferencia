@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "node src",
-    "dev" : "nodemon src"
+    "start": "node src",
+    "dev": "nodemon src"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/kenay19/RegistroConferencia#readme",
   "dependencies": {
     "express": "4.18.0",
-    "mysql": "2.18.1"
+    "express-handlebars": "6.0.5",
+    "mysql": "2.18.1",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "2.0.15"
