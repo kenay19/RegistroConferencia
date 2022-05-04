@@ -5,12 +5,12 @@ form.addEventListener('submit', (e) => {
         url: '/',
         type: 'POST',
         dataType: 'json',
-        data: { cuenta:form.cuenta.value},
+        data: { Cuenta:form.cuenta.value},
         success: (e) => {
-            console.log(form.cuenta.value);
-            form.cuenta.value="";
-            console.log(form.cuenta.value);
-            console.log("==========================");
+            document.getElementById('message').innerHTML = e;
+        },
+        error: (e) => {
+            console.log("server can't give one response");
         }
 
     });
