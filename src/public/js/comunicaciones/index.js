@@ -7,7 +7,12 @@ form.addEventListener('submit', (e) => {
         dataType: 'json',
         data: { Cuenta:form.cuenta.value},
         success: (e) => {
-            document.getElementById('message').innerHTML = e;
+            if(e.response) {
+                document.getElementById('message').innerHTML = e.response;
+            }
+            if(e.cuenta) {
+                document.getElementById('qr').setAttribute('src','img/'+e.cuenta+".svg");
+            }
         },
         error: (e) => {
             console.log("server can't give one response");

@@ -3,11 +3,11 @@ const {report} = require('../databases');
 module.exports = {
     select: async(Cuenta) => {
         const result = await report.query('SELECT * FROM conferencia WHERE Cuenta=? ',[Cuenta]);
-        if(result[0] != null) {
+        if(result[0]) {
             if(result[0].Registro==0) {
                 return [true,result[0]];
             }else{
-                return [true,"Registro Realizado Anteriormente"];
+                return [true,"Registro Realizado Anteriormente",result[0]];
             }
         }else{
             return [false];
