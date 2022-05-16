@@ -28,11 +28,6 @@ server.use(favicon(path.join(__dirname,'public','img','uaemex.ico')));
 //server.use(morgan('dev'));
 server.use(express.urlencoded({ extended: false }));
 server.use(express.json());
-/*server.use(session({
-    secret: process.env.SESSION_SECRET || 'production2C44-4D44-WppQ38S',
-    resave: true,
-    saveUninitialized: true
-}));*/
 
 //  Routes
 

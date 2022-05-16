@@ -1,9 +1,8 @@
 DROP DATABASE IF EXISTS registro;
 CREATE DATABASE IF NOT EXISTS registro;
 USE registro;
-CREATE TABLE IF NOT EXISTS report(
-    numeroCuenta INT ,
-    nombre VARCHAR(50),
-    app VARCHAR(50),
-    apm VARCHAR(50)
+CREATE TABLE IF NOT EXISTS conferencia(
+   Cuenta VARCHAR(7),
+   Nombre VARCHAR(50),
+   Registro VARCHAR(1)
 );
